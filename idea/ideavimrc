@@ -1,0 +1,141 @@
+let mapleader=" "
+
+set ideajoin
+set selectmode=ideaselection
+set vb
+set clipboard=ideaput,unnamed,autoselect
+set history=200
+set scrolloff=5
+set ignorecase
+set hlsearch
+set incsearch
+set smartcase
+set showmode
+set showcmd
+set notimeout
+set timeoutlen=1000
+
+sethandler i:ide
+
+set easymotion
+set NERDTree
+set surround
+set multiple-cursors
+set commentary
+set ReplaceWithRegister
+set argtextobj
+set textobj-entire
+set highlightedyank
+set textobj-indent
+set quickscope
+set keep-english-in-normal
+
+nmap gd <Action>(GotoDeclaration)
+nmap gy <Action>(GotoTypeDeclaration)
+nmap gi <Action>(GotoImplementation)
+nmap gu <Action>(GotoSuperMethod)
+nmap g. <Action>(JumpToLastChange)
+
+map <leader>ws <Action>(SplitHorizontally)
+map <leader>wv <Action>(SplitVertically)
+map <leader>ww <Action>(NextSplitter)
+map <leader>wq <Action>(CloseAllEditors)
+map <leader>wt <Action>(ChangeSplitOrientation)
+map <leader>wm <Action>(MaximizeEditorInSplit)
+map <leader>wo <Action>(CloseAllEditorsButActive)
+map <leader>wJ <Action>(StretchSplitToBottom)
+map <leader>wK <Action>(StretchSplitToTop)
+map <leader>wH <Action>(StretchSplitToLeft)
+map <leader>wL <Action>(StretchSplitToRight)
+map <leader><leader> <Action>(SearchEverywhere)
+map <leader>s <Action>(FileStructurePopup)
+map <leader>S <Action>(GotoSymbol)
+map <leader>r <Action>(RenameElement)
+map <leader>R <Action>(Refactorings.QuickListPopupAction)
+map <leader>a <Action>(ShowIntentionActions)
+map <leader>v <Action>(Vcs.QuickListPopupAction)
+map <leader>k <Action>(QuickJavaDoc)
+map <leader>e <Action>(ShowErrorDescription)
+map <leader>H <Action>(LocalHistory.ShowHistory)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map <leader>b <Action>(Annotate)
+map <leader>c <Action>(VcsShowCurrentChangeMarker)
+map <leader>z <Action>(Vcs.RollbackChangedLines)
+map <leader>f <Action>(GotoFile)
+map <leader>t <Action>(GotoClass)
+map <leader>? <Action>(GotoAction)
+map <leader>d <Action>(GotoDatabaseObject)
+map <leader>u <Action>(GotoUrlAction)
+map <leader>/ <Action>(TextSearchAction)
+map <leader>y <Action>(QuickTypeDefinition)
+map <leader>p <Action>(GotoChangedFile)
+map <leader>gl <Action>(Debug)
+map <leader>gr <Action>(Rerun)
+map <leader>gt <Action>(Stop)
+map <leader>gb <Action>(ToggleLineBreakpoint)
+map <leader>gB <Action>(ToggleBreakpointEnabled)
+map <leader>gv <Action>(ViewBreakpoints)
+map <leader>ge <Action>(EvaluateExpression)
+map <leader>gi <Action>(StepInto)
+map <leader>gI <Action>(SmartStepInto)
+map <leader>gn <Action>(StepOver)
+map <leader>gN <Action>(ForceStepOver)
+map <leader>go <Action>(StepOut)
+map <leader>gp <Action>(ShowExecutionPoint)
+map <leader>gc <Action>(Resume)
+map <leader>gh <Action>(RunToCursor)
+map <leader>gH <Action>(ForceRunToCursor)
+
+nmap ]g <Action>(VcsShowNextChangeMarker)
+nmap ]f <Action>(MethodDown)
+nmap ]p <Action>(EditorForwardParagraph)
+nmap ]d <Action>(GotoNextError)
+nmap ]c <Action>(NextDiff)
+nmap ]C <Action>(Diff.NextChange)
+
+nmap [g <Action>(VcsShowPrevChangeMarker)
+nmap [f <Action>(MethodUp)
+nmap [p <Action>(EditorBackwardParagraph)
+nmap [d <Action>(GotoPreviousError)
+nmap [c <Action>(PreviousDiff)
+nmap [C <Action>(Diff.PrevChange)
+
+nmap mm <Action>(EditorMatchBrace)
+nmap ms ys
+nmap md ds
+nmap mr cs
+nmap maf vai
+nmap mae vae
+nmap maa vaa
+nmap mif vii
+nmap mie vie
+nmap mia via
+
+nnoremap L g_
+nnoremap H ^
+nnoremap j gj
+nnoremap k gk
+nnoremap U <C-r>
+
+map / <Plug>(easymotion-prefix)
+nmap n <Plug>(easymotion-s)
+nmap Q <Action>(ReformatCode)
+map <A-o> <Action>(EditorSelectWord)
+map <A-i> <Action>(EditorUnSelectWord)
+map <A-j> <Action>(SelectInProjectView)
+map <A-z> <Action>(ToggleDistractionFreeMode)
+map <A-q> <Action>(HideAllWindows)
+map <A-c> <Action>(CloseProject)
+map <A-w> <Action>(JumpToLastWindow)
+map <A-m> <Action>(ManageRecentProjects)
+nmap <C-i> <Action>(Forward)
+nmap <C-o> <Action>(Back)
+
+let g:highlightedyank_highlight_duration = 300
+
+let g:argtextobj_pairs="(:),{:},<:>,[:]"
+
+let g:indent_object_except_first_level = 0
+
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+let g:qs_disable_for_diffs = 1

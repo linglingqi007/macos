@@ -1,0 +1,59 @@
+""" vim config
+
+""" plugins
+call plug#begin()
+
+Plug 'tpope/vim-sensible'
+Plug 'morhetz/gruvbox'
+
+call plug#end()
+
+""" general 
+set nocompatible " 不需要兼容vi
+set termguicolors " 真彩色
+colorscheme gruvbox " 主题
+set background=dark " 暗色背景
+set clipboard=unnamed,autoselect " 复制到系统粘贴板
+set magic  " 正则$ . * ^ [ ] 不需要转义
+set encoding=utf-8 " 编码
+set fileformats=unix,mac,dos
+set hlsearch " 高亮查找
+set incsearch " 增量查找
+set ignorecase " 查找时忽略大小写
+set smartcase " 智能改变ignorecase 
+set nu rnu numberwidth=4 " 行号 相对行号 行号固定宽度
+set cursorline " 显示光标行
+set showmode " 显示vim mode
+set showcmd " 显示己操作未完成的命令 右边
+set cmdheight=1 " 命令行高度
+set laststatus=2 " 显示状态栏
+set showtabline=2 " 总是显示tab行
+set hidden
+set showmatch " 输入成对符号时显示匹配对
+set matchtime=2 " 匹配对时间
+set noerrorbells " 不错误警告音
+set novisualbell " 不闪屏
+set noswapfile " 不生成swap
+set nobackup " 不备份
+set autoindent
+set smartindent
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set splitbelow " 在下面打开窗口
+set nojoinspaces " 使用J连接行时 当第一行末是.符号的时候 避免有两个空格
+set nowrap " 不折行
+set sidescroll=1 " 当行超出屏幕 使用平滑滚动显示
+
+""" keys
+let mapleader = " "
+nnoremap L g_
+nnoremap H ^
+nnoremap j gj
+nnoremap k gk
+noremap ; :
+cmap <C-p> <Up>
+cmap <C-n> <Down>
+
+""" vim config ends here

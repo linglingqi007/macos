@@ -1,0 +1,72 @@
+[language-server.gopls.config]
+gofumpt = true
+
+[language-server.golangci-lint-lsp]
+command = 'golangci-lint-langserver'
+
+[language-server.golangci-lint-lsp.config]
+command = ['golangci-lint', 'run', '--fast', '--out-format', 'json', '--issues-exit-code=1']
+
+[[language]]
+name = 'go'
+language-servers = ['gopls']
+auto-format = true
+
+[[language]]
+name = 'toml'
+indent = { tab-width = 4, unit = '    ' }
+auto-format = true
+
+[[language]]
+name = 'sql'
+formatter = { command = 'sqlformat', args = ['--reindent', '--indent_width', '4', '--keywords', 'upper', '--identifiers', 'lower', '-'] }
+auto-format = true
+
+[[language]]
+name = 'bash'
+indent = { tab-width = 4, unit = '    ' }
+auto-format = true
+
+[[language]]
+name = 'python'
+auto-format = true
+
+[[language]]
+name = 'json'
+indent = { tab-width = 4, unit = '    ' }
+auto-format = true
+
+[[language]]
+name = 'markdown'
+indent = { tab-width = 4, unit = '    ' }
+auto-format = true
+
+[[language]]
+name = 'typescript'
+indent = { tab-width = 4, unit = '    ' }
+auto-format = true
+
+[[language]]
+name = 'javascript'
+indent = { tab-width = 4, unit = '    ' }
+auto-format = true
+
+[[language]]
+name = 'jsx'
+indent = { tab-width = 4, unit = '    ' }
+auto-format = true
+
+[[language]]
+name = 'tsx'
+indent = { tab-width = 4, unit = '    ' }
+auto-format = true
+
+[[language]]
+name = 'css'
+indent = { tab-width = 4, unit = '    ' }
+auto-format = true
+
+[[language]]
+name = 'html'
+indent = { tab-width = 4, unit = '    ' }
+auto-format = true

@@ -1,0 +1,14 @@
+# alias
+
+# tools
+alias lzg='lazygit'
+alias lzd='lazydocker'
+
+# ls
+alias ls='ls --color'
+alias ll='ls -lh -t --time=birth --time-style=long-iso'
+
+# pnpm
+alias ppm='pnpm'
+
+# alias ends here
