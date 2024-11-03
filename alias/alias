@@ -5,8 +5,9 @@ alias lzg='lazygit'
 alias lzd='lazydocker'
 
 # ls
-alias ls='ls --color'
-alias ll='ls -lh -t --time=birth --time-style=long-iso'
+alias ls='lsd'
+alias ll="lsd -l --date=+'%Y-%m-%d %T'"
+alias la="lsd -lA --date=+'%Y-%m-%d %T'"
 
 # pnpm
 alias ppm='pnpm'

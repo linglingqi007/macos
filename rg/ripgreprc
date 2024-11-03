@@ -1,0 +1,7 @@
+--type-add=web:*.{html,css,js}*
+
+--hidden
+
+--glob=!.git/*
+
+--ignore-case
