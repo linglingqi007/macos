@@ -7,3 +7,6 @@ blocks:
   - name
 
 date: '+%Y-%m-%d %T'
+
+sorting:
+  column: time

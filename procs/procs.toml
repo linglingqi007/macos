@@ -197,8 +197,8 @@ tree_symbols = ["│", "─", "┬", "├", "└"]
 abbr_sid = true
 
 [sort]
-column = 0
-order = "Ascending"
+column = 7
+order = "Descending"
 
 [docker]
 path = "unix:///var/run/docker.sock"

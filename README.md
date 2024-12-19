@@ -1,2 +1,2 @@
-# Ininial macos
+# Initial MacOS
 

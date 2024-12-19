@@ -1,8 +1,10 @@
+#!/usr/bin/env bash
 # alias
 
 # tools
 alias lzg='lazygit'
 alias lzd='lazydocker'
+alias lzs='lazysql'
 
 # ls
 alias ls='lsd'
@@ -11,5 +13,8 @@ alias la="lsd -lA --date=+'%Y-%m-%d %T'"
 
 # pnpm
 alias ppm='pnpm'
+
+# grsync
+alias rr='grsync --exclude-dir=.git -a'
 
 # alias ends here
