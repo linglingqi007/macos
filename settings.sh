@@ -29,7 +29,7 @@ defaults write com.apple.dock persistent-apps -array "" # 取消固定应用
 defaults write -g NSDocumentSaveNewDocumentsToCloud -bool true # 禁用保存到 iCloud
 
 # finder
-defaults write com.apple.finder QuitMenuItem -bool true # 允许通过 ⌘Q 退出
+# defaults write com.apple.finder QuitMenuItem -bool true # 允许通过 ⌘Q 退出
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false # 禁用更改文件扩展名时的警告
 defaults write com.apple.finder AppleShowAllExtensions -bool true # 显示所有文件扩展名
 defaults write com.apple.finder AppleShowAllFiles -bool true # 显示所有文件

@@ -70,9 +70,11 @@ cmap <C-n> <Down>
 let g:highlightedyank_highlight_duration = 200
 
 """ easymotion/vim-easymotion
-map <Leader> <Plug>(easymotion-prefix)
+map \ <Plug>(easymotion-prefix)
 map / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
+map f <Plug>(easymotion-w)
+map F <Plug>(easymotion-b)
 
 """ kkew3/jieba.vim
 let g:jieba_vim_keymap = 1
