@@ -59,31 +59,6 @@ defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeF
 sudo spctl --master-disable # 允许打开所有来源应用
 
 # default handler
-duti -s com.microsoft.VSCode .c all
-duti -s com.microsoft.VSCode .cpp all
-duti -s com.microsoft.VSCode .cs all
-duti -s com.microsoft.VSCode .css all
-duti -s com.microsoft.VSCode .js all
-duti -s com.microsoft.VSCode .json all
-duti -s com.microsoft.VSCode .ts all
-duti -s com.microsoft.VSCode .jsx all
-duti -s com.microsoft.VSCode .sass all
-duti -s com.microsoft.VSCode .scss all
-duti -s com.microsoft.VSCode .less all
-duti -s com.microsoft.VSCode .vue all
-duti -s com.microsoft.VSCode .go all
-duti -s com.microsoft.VSCode .java all
-duti -s com.microsoft.VSCode .lua all
-duti -s com.microsoft.VSCode .md all
-duti -s com.microsoft.VSCode .php all
-duti -s com.microsoft.VSCode .pl all
-duti -s com.microsoft.VSCode .py all
-duti -s com.microsoft.VSCode .rb all
-duti -s com.microsoft.VSCode .rs all
-duti -s com.microsoft.VSCode .sh all
-duti -s com.microsoft.VSCode .txt all
-duti -s com.microsoft.VSCode .conf all
-duti -s com.microsoft.VSCode .cfg all
-duti -s com.microsoft.VSCode .ass all
-duti -s com.microsoft.VSCode .yml all
-duti -s com.microsoft.VSCode .yaml all
+for ext in c cpp cs css js json ts jsx sass scss less vue go java lua md php pl py rb rs sh txt conf cfg ass yml yaml; do
+    duti -s com.microsoft.VSCode .$ext all
+done
