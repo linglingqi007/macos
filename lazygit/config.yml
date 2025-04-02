@@ -1,0 +1,10 @@
+gui:
+  language: 'auto'
+  showIcons: true
+  authorColors:
+    '凌凌漆': red
+
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
