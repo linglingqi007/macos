@@ -1,16 +1,8 @@
 [language-server.gopls.config]
 gofumpt = true
 
-[language-server.golangci-lint-lsp]
-command = 'golangci-lint-langserver'
-
 [language-server.golangci-lint-lsp.config]
 command = ['golangci-lint', 'run', '--fast', '--out-format', 'json', '--issues-exit-code=1']
-
-[[language]]
-name = 'go'
-language-servers = ['gopls']
-auto-format = true
 
 [[language]]
 name = 'toml'
@@ -39,6 +31,7 @@ auto-format = true
 [[language]]
 name = 'markdown'
 indent = { tab-width = 4, unit = '    ' }
+comment-tokens = ['-', '+', '*', '- [ ]', '>']
 auto-format = true
 
 [[language]]
