@@ -1,8 +1,9 @@
 tags
 .idea
+.vscode
 .DS_Store
 .swp
 node_modules
 makefilex
 go.work
-
+go.work.sum
