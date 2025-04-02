@@ -6,15 +6,29 @@ mouse = false
 cursorline = true
 color-modes = true
 idle-timeout = 0
-
-[editor.cursor-shape]
-insert = 'bar'
-select = 'underline'
+completion-timeout = 5
+end-of-line-diagnostics = 'error'
 
 [editor.statusline]
-left = ['spinner', 'mode', 'version-control', 'read-only-indicator', 'file-modification-indicator']
-center = ['file-base-name', 'workspace-diagnostics']
-right = ['register', 'primary-selection-length', 'selections', 'file-encoding', 'file-line-ending', 'position', 'position-percentage', 'total-line-numbers']
+left = [
+    'mode',
+    'spinner',
+    'version-control',
+    'file-base-name',
+    'read-only-indicator',
+    'file-modification-indicator',
+]
+center = ['diagnostics']
+right = [
+    'register',
+    'primary-selection-length',
+    'selections',
+    'file-encoding',
+    'file-line-ending',
+    'position',
+    'position-percentage',
+    'total-line-numbers',
+]
 
 [editor.file-picker]
 hidden = false
@@ -28,15 +42,15 @@ parents = false
 tab = 'all'
 space = 'none'
 nbsp = 'none'
+nnbsp = 'none'
 newline = 'none'
 
 [editor.indent-guides]
 render = true
-character = '┊'
+character = '╎'
 skip-levels = 1
 
 [editor.lsp]
-display-messages = true
 goto-reference-include-declaration = false
 
 [keys.insert]
@@ -50,6 +64,11 @@ home = 'no_op'
 end = 'no_op'
 
 [keys.normal]
-A-e = ':open ~/.config/helix/config.toml'
-A-r = ':reload'
-A-R = ':reload-all'
+up = 'no_op'
+down = 'no_op'
+left = 'no_op'
+right = 'no_op'
+pageup = 'no_op'
+pagedown = 'no_op'
+home = 'no_op'
+end = 'no_op'
