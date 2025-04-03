@@ -1,15 +1,18 @@
 #!/usr/bin/env bash
 # alias
 
-# tools
-alias lzg='lazygit'
-alias lzd='lazydocker'
-alias lzs='lazysql'
+# tui
+alias tg='lazygit'
+alias td='lazydocker'
+alias tq='lazysql'
 
 # ls
 alias ls='lsd'
-alias ll="lsd -l --date=+'%Y-%m-%d %T'"
-alias la="lsd -lA --date=+'%Y-%m-%d %T'"
+alias ll='lsd -l'
+alias la='lsd -lA'
+
+# bat
+alias cat='bat --paging=never'
 
 # pnpm
 alias ppm='pnpm'
