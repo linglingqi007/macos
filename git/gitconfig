@@ -1,0 +1,39 @@
+[include]
+    path = ~/.config/delta/config
+
+[core]
+    pager = delta
+	excludesFile = ~/.gitignore
+	editor = hx
+
+[interactive]
+    diffFilter = delta --color-only
+
+[merge]
+    conflictstyle = zdiff3
+
+[diff]
+    colorMoved = default
+
+[user]
+	email = if.true.else@gmail.com
+	name = 周星星✨
+	signingkey = ~/.ssh/id_rsa.pub
+
+[gpg]
+	format = ssh
+
+[commit]
+	gpgsign = true
+
+[tag]
+	gpgsign = true
+
+[init]
+	defaultBranch = main
+
+[url "git@github.com:firemky"]
+	insteadOf = https://github.com/firemky
+
+[url "git@github.com:yybx"]
+	insteadOf = https://github.com/yybx
