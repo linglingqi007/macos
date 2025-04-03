@@ -72,12 +72,3 @@ pageup = 'no_op'
 pagedown = 'no_op'
 home = 'no_op'
 end = 'no_op'
-
-C-g = [
-    ":write-all",
-    ":new",
-    ":insert-output lazygit",
-    ":buffer-close!",
-    ":redraw",
-    ":reload-all",
-]
