@@ -1,6 +1,7 @@
 gui:
-  language: 'auto'
+  mouseEvents: false
   showIcons: true
+  filterMode: 'fuzzy'
   authorColors:
     '凌凌漆': red
 
