@@ -5,6 +5,7 @@
 alias tg='lazygit'
 alias td='lazydocker'
 alias tq='lazysql'
+alias ij='zellij'
 
 # ls
 alias ls='lsd'
