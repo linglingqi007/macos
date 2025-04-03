@@ -63,7 +63,5 @@ fi
 
 # 安装字体
 echo "正在安装字体..."
-brew tap homebrew/cask-fonts
-brew install --cask font-jetbrains-mono font-meslo-lg-nerd-font
-
+brew install font-jetbrains-mono font-hack-nerd-font 
 echo "字体安装完成"
