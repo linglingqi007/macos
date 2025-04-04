@@ -1,6 +1,7 @@
 gui:
+  splitDiff: always
   showIcons: true
-  filterMode: 'fuzzy'
+  filterMode: fuzzy
   skipDiscardChangeWarning: true
   authorColors:
     '凌凌漆': red
