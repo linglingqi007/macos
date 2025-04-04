@@ -59,16 +59,6 @@ set sidescroll=1 " 当行超出屏幕 使用平滑滚动显示
 """ keys
 let mapleader = " "
 
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-
-imap <Left> <Nop>
-imap <Right> <Nop>
-imap <Up> <Nop>
-imap <Down> <Nop>
-
 nnoremap L g_
 nnoremap H ^
 nnoremap j gj
