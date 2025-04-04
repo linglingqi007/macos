@@ -1,7 +1,7 @@
 gui:
-  mouseEvents: false
   showIcons: true
   filterMode: 'fuzzy'
+  skipDiscardChangeWarning: true
   authorColors:
     '凌凌漆': red
 
@@ -9,3 +9,5 @@ git:
   paging:
     colorArg: always
     pager: delta --dark --paging=never
+
+promptToReturnFromSubprocess: false
