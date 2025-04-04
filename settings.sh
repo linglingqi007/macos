@@ -16,7 +16,7 @@ defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false #
 # launchpad
 defaults write com.apple.dock springboard-rows -int 7 # launchpad 行数
 defaults write com.apple.dock springboard-columns -int 7 # launchpad 列数
-defaults write com.apple.dock ResetLaunchPad -bool true # 重置排列
+# rm -rf /private"$(getconf DARWIN_USER_DIR)"com.apple.dock.launchpad; killall Dock
 
 # dock
 defaults write com.apple.dock autohide -bool true # 自动隐藏 dock
