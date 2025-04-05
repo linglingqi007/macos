@@ -7,7 +7,6 @@ cursorline = true
 color-modes = true
 idle-timeout = 0
 completion-timeout = 5
-end-of-line-diagnostics = 'error'
 
 [editor.statusline]
 left = [
