@@ -19,9 +19,9 @@ set -o vi
 
 # alias
 if [[ -d "${HOME}/.alias" ]]; then
-    for file in $(ls -1 "${HOME}/.alias"); do
-        source "${HOME}/.alias/${file}"
-    done
+	for file in $(ls -1 "${HOME}/.alias"); do
+		source "${HOME}/.alias/${file}"
+	done
 fi
 
 # path
@@ -70,6 +70,9 @@ eval "$(starship init zsh)"
 
 # man pager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# atac
+export ATAC_KEY_BINDINGS="${HOME}/.config/atac/keybinding.toml"
 
 # completion
 autoload -U compinit
