@@ -12,7 +12,8 @@ auto-format = true
 
 [[language]]
 name = 'sql'
-formatter = { command = 'sqlformat', args = ['--reindent', '--indent_width', '4', '--keywords', 'upper', '--identifiers', 'lower', '-'] }
+# formatter = { command = 'sqlformat', args = ['-k', 'upper', '-i', 'lower', '-'] }
+formatter = { command = 'deno', args = ['fmt', '-', '--ext', 'sql', '--line-width', '140', '--indent-width', '4', '--unstable-sql'] }
 auto-format = true
 
 [[language]]
@@ -33,6 +34,7 @@ auto-format = true
 name = 'markdown'
 indent = { tab-width = 4, unit = '    ' }
 comment-tokens = ['-', '+', '*', '- [ ]', '>']
+formatter = { command = 'deno', args = ['fmt', '-', '--ext', 'md', '--line-width', '140', '--indent-width', '4'] }
 auto-format = true
 
 [[language]]
