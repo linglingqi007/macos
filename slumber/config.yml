@@ -1,0 +1,19 @@
+pager: bat
+large_body_size: 1000000
+preview_templates: true
+input_bindings:
+  up: [k]
+  down: [j]
+  left: [h]
+  right: [l]
+  scroll_left: [shift h]
+  scroll_right: [shift l]
+  select_recipe_list: [w]
+  reload_collection: [shift r]
+  history: [g]
+theme:
+  primary_color: Blue
+  primary_text_color: White
+  secondary_color: Yellow
+  success_color: Green
+  error_color: Red
