@@ -1,0 +1,29 @@
+[general]
+import = ['~/.config/alacritty/themes/themes/gruvbox_dark.toml']
+
+[window]
+padding = { x = 3, y = 3 }
+dynamic_padding = true
+decorations = 'None'
+opacity = 0.9
+startup_mode = 'Maximized'
+option_as_alt = 'OnlyLeft'
+
+[font]
+normal = { family = 'Hack Nerd Font Mono', style = 'Regular' }
+size = 14
+offset = { y = 0 }
+
+[bell]
+duration = 0
+color = '#181818'
+
+[selection]
+save_to_clipboard = true
+
+[cursor]
+style = { shape = 'underline' }
+vi_mode_style = { shape = 'block' }
+
+[mouse]
+hide_when_typing = true
