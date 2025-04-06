@@ -7,16 +7,11 @@ dynamic_padding = true
 decorations = 'None'
 opacity = 0.95
 startup_mode = 'Maximized'
-option_as_alt = 'OnlyLeft'
+option_as_alt = 'Both'
 
 [font]
 normal = { family = 'Hack Nerd Font Mono', style = 'Regular' }
 size = 14
-offset = { y = 0 }
-
-[bell]
-duration = 0
-color = '#181818'
 
 [selection]
 save_to_clipboard = true
