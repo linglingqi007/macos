@@ -7,7 +7,7 @@ command = ['golangci-lint', 'run', '--fast', '--out-format', 'json', '--issues-e
 [[language]]
 name = 'toml'
 indent = { tab-width = 4, unit = '    ' }
-formatter = { command = 'taplo', args = ['fmt', '-o', 'indent_string=    ', '-o', 'column_width=160', '-'] }
+formatter = { command = 'taplo', args = ['fmt', '-o', 'indent_string=    ', '-o', 'column_width=140', '-'] }
 auto-format = true
 
 [[language]]

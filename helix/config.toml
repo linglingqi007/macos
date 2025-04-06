@@ -9,14 +9,7 @@ idle-timeout = 0
 completion-timeout = 5
 
 [editor.statusline]
-left = [
-    'mode',
-    'spinner',
-    'version-control',
-    'file-base-name',
-    'read-only-indicator',
-    'file-modification-indicator',
-]
+left = ['mode', 'spinner', 'version-control', 'file-base-name', 'read-only-indicator', 'file-modification-indicator']
 center = ['diagnostics']
 right = [
     'register',
@@ -29,13 +22,19 @@ right = [
     'total-line-numbers',
 ]
 
+[editor.lsp]
+goto-reference-include-declaration = false
+
+[editor.cursor-shape]
+insert = 'underline'
+
 [editor.file-picker]
 hidden = false
+parents = false
+ignore = false
 git-ignore = false
 git-global = false
 git-exclude = false
-ignore = false
-parents = false
 
 [editor.whitespace.render]
 tab = 'all'
@@ -48,6 +47,3 @@ newline = 'none'
 render = true
 character = '╎'
 skip-levels = 1
-
-[editor.lsp]
-goto-reference-include-declaration = false
