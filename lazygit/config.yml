@@ -1,10 +1,11 @@
 gui:
+  mouseEvents: false
   splitDiff: always
   showIcons: true
   filterMode: fuzzy
   skipDiscardChangeWarning: true
   authorColors:
-    '凌凌漆': red
+    "凌凌漆": red
 
 git:
   paging:

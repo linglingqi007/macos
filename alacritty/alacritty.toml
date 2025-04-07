@@ -14,7 +14,7 @@ normal = { family = 'Hack Nerd Font Mono', style = 'Regular' }
 size = 14
 
 [selection]
-save_to_clipboard = true
+save_to_clipboard = false
 
 [cursor]
 style = { shape = 'underline' }
