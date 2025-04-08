@@ -9,12 +9,12 @@ idle-timeout = 0
 completion-timeout = 5
 
 [editor.statusline]
-left = ['mode', 'spinner', 'version-control', 'file-base-name', 'read-only-indicator', 'file-modification-indicator']
-center = ['diagnostics']
+left = ['mode', 'spinner', 'version-control', 'file-base-name', 'read-only-indicator', 'diagnostics', 'file-modification-indicator']
 right = [
   'register',
   'primary-selection-length',
   'selections',
+  'file-type',
   'file-encoding',
   'file-line-ending',
   'position',
