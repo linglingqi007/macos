@@ -11,22 +11,10 @@ validation = true
 [language-server.yaml-language-server.config.yaml.schemas]
 'https://json.schemastore.org/github-workflow.json' = '.github/workflows/*.{yml,yaml}'
 
-[language-server.deno-lsp]
-command = 'deno'
-args = ['lsp']
-config.deno.enable = true
-
-[[language]]
-name = 'typescript'
-roots = ['deno.json', 'deno.jsonc']
-auto-format = true
-language-servers = ['deno-lsp']
-
-[[language]]
-name = 'javascript'
-roots = ['deno.json', 'deno.jsonc']
-auto-format = true
-language-servers = ['deno-lsp']
+[[language-server.typescript-language-server.config.plugins]]
+name = '@vue/typescript-plugin'
+location = '/opt/homebrew/lib/node_modules/@vue/language-server/'
+languages = ['vue']
 
 [[language]]
 name = 'yaml'
@@ -34,12 +22,14 @@ formatter = { command = 'deno', args = ['fmt', '-', '--ext', 'yml', '--line-widt
 auto-format = true
 
 [[language]]
-name = 'lua'
+name = 'toml'
+formatter = { command = 'taplo', args = ['fmt', '-o', 'column_width=140', '-'] }
 auto-format = true
 
 [[language]]
-name = 'toml'
-formatter = { command = 'taplo', args = ['fmt', '-o', 'column_width=140', '-'] }
+name = 'markdown'
+comment-tokens = ['-', '+', '*', '- [ ]', '>']
+formatter = { command = 'deno', args = ['fmt', '-', '--ext', 'md', '--line-width', '140', '--indent-width', '2'] }
 auto-format = true
 
 [[language]]
@@ -52,12 +42,26 @@ name = 'python'
 auto-format = true
 
 [[language]]
-name = 'markdown'
-comment-tokens = ['-', '+', '*', '- [ ]', '>']
-formatter = { command = 'deno', args = ['fmt', '-', '--ext', 'md', '--line-width', '140', '--indent-width', '2'] }
+name = 'awk'
+formatter = { command = 'gawk', timeout = 5, args = ['--file=/dev/stdin', '--pretty-print=/dev/stdout'] }
 auto-format = true
 
 [[language]]
-name = 'awk'
-formatter = { command = 'gawk', timeout = 5, args = ['--file=/dev/stdin', '--pretty-print=/dev/stdout'] }
+name = 'javascript'
+language-servers = ['typescript-language-server', 'vscode-eslint-language-server']
+auto-format = true
+
+[[language]]
+name = 'typescript'
+language-servers = ['typescript-language-server', 'vscode-eslint-language-server']
+auto-format = true
+
+[[language]]
+name = 'vue'
+auto-format = true
+formatter = { command = 'prettier', args = ['--parser', 'vue'] }
+language-servers = ['typescript-language-server']
+
+[[language]]
+name = 'lua'
 auto-format = true
