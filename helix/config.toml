@@ -12,14 +12,14 @@ completion-timeout = 5
 left = ['mode', 'spinner', 'version-control', 'file-base-name', 'read-only-indicator', 'file-modification-indicator']
 center = ['diagnostics']
 right = [
-    'register',
-    'primary-selection-length',
-    'selections',
-    'file-encoding',
-    'file-line-ending',
-    'position',
-    'position-percentage',
-    'total-line-numbers',
+  'register',
+  'primary-selection-length',
+  'selections',
+  'file-encoding',
+  'file-line-ending',
+  'position',
+  'position-percentage',
+  'total-line-numbers',
 ]
 
 [editor.lsp]
