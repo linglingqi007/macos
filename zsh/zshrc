@@ -69,7 +69,7 @@ function y() {
 eval "$(starship init zsh)"
 
 # man pager
-export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
 
 # atac
 export ATAC_KEY_BINDINGS="${HOME}/.config/atac/keybinding.toml"
