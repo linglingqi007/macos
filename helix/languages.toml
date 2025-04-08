@@ -18,13 +18,13 @@ config.deno.enable = true
 
 [[language]]
 name = 'typescript'
-roots = ['deno.json', 'deno.jsonc', 'package.json']
+roots = ['deno.json', 'deno.jsonc']
 auto-format = true
 language-servers = ['deno-lsp']
 
 [[language]]
 name = 'javascript'
-roots = ['deno.json', 'deno.jsonc', 'package.json']
+roots = ['deno.json', 'deno.jsonc']
 auto-format = true
 language-servers = ['deno-lsp']
 
@@ -35,7 +35,6 @@ auto-format = true
 
 [[language]]
 name = 'lua'
-indent = { tab-width = 4, unit = '    ' }
 auto-format = true
 
 [[language]]
@@ -45,13 +44,7 @@ auto-format = true
 
 [[language]]
 name = 'sql'
-# formatter = { command = 'sqlformat', args = ['-k', 'upper', '-i', 'lower', '-'] }
 formatter = { command = 'deno', args = ['fmt', '-', '--ext', 'sql', '--line-width', '140', '--indent-width', '4', '--unstable-sql'] }
-auto-format = true
-
-[[language]]
-name = 'bash'
-indent = { tab-width = 4, unit = '    ' }
 auto-format = true
 
 [[language]]
@@ -65,31 +58,6 @@ formatter = { command = 'deno', args = ['fmt', '-', '--ext', 'md', '--line-width
 auto-format = true
 
 [[language]]
-name = 'typescript'
-indent = { tab-width = 4, unit = '    ' }
-auto-format = true
-
-[[language]]
-name = 'javascript'
-indent = { tab-width = 4, unit = '    ' }
-auto-format = true
-
-[[language]]
-name = 'jsx'
-indent = { tab-width = 4, unit = '    ' }
-auto-format = true
-
-[[language]]
-name = 'tsx'
-indent = { tab-width = 4, unit = '    ' }
-auto-format = true
-
-[[language]]
-name = 'css'
-indent = { tab-width = 4, unit = '    ' }
-auto-format = true
-
-[[language]]
-name = 'html'
-indent = { tab-width = 4, unit = '    ' }
+name = 'awk'
+formatter = { command = 'gawk', timeout = 5, args = ['--file=/dev/stdin', '--pretty-print=/dev/stdout'] }
 auto-format = true
