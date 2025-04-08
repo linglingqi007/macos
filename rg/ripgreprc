@@ -5,3 +5,5 @@
 --glob=!.git/*
 
 --ignore-case
+
+--engine=auto
