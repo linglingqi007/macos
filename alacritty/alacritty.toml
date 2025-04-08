@@ -21,4 +21,4 @@ style = { shape = 'underline' }
 vi_mode_style = { shape = 'block' }
 
 [mouse]
-hide_when_typing = true
+hide_when_typing = false
