@@ -15,6 +15,7 @@ alias la='lsd -lA'
 
 # bat
 alias cat='bat --paging=never'
+alias bth='bat -p -l help'
 
 # pnpm
 alias ppm='pnpm'
