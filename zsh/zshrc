@@ -74,6 +74,14 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # atac
 export ATAC_KEY_BINDINGS="${HOME}/.config/atac/keybinding.toml"
 
+# pnpm
+export PNPM_HOME="/Users/a007/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
 # completion
 autoload -U compinit
 compinit
