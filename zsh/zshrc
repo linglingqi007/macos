@@ -38,9 +38,6 @@ export EDITOR="hx"
 # rg
 export RIPGREP_CONFIG_PATH=$HOME/.config/ripgreprc
 
-# zoxide
-eval "$(zoxide init zsh)"
-
 # fx
 export FX_THEME=8
 export FX_LANG=node
@@ -65,9 +62,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# starship
-eval "$(starship init zsh)"
-
 # man pager
 export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -p -lman'"
 
@@ -85,3 +79,10 @@ esac
 # completion
 autoload -U compinit
 compinit
+
+# starship
+eval "$(starship init zsh)"
+
+# zoxide
+eval "$(zoxide init zsh)"
+
