@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-scooter
+scooter --hidden
 
 zellij action toggle-floating-panes
 
