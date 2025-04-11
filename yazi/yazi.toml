@@ -1,11 +1,24 @@
 # A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
-"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+"$schema" = 'https://yazi-rs.github.io/schemas/yazi.json'
 
 [manager]
 sort_by = 'mtime'
 sort_reverse = true
 sort_dir_first = true
-linemode = 'owner'
+linemode = 'size'
 show_hidden = true
 mouse_events = []
+
+[plugin]
+# prepend_previewers = [{ name = '*.md', run = 'glow' }]
+
+[[plugin.prepend_fetchers]]
+id = 'git'
+name = '*'
+run = 'git'
+
+[[plugin.prepend_fetchers]]
+id = 'git'
+name = '*/'
+run = 'git'
