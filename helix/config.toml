@@ -48,3 +48,6 @@ newline = 'none'
 render = true
 character = '╎'
 skip-levels = 1
+
+[keys.normal.space]
+v = [':write-all', ':sh zellij run -n Git -c -f -x 5% -y 5% --width 90% --height 90% -- bash ~/.config/helix/lazygit.sh']
