@@ -51,7 +51,7 @@ v = [':write-all', ':sh zellij run -n Git -c -f -x 5% -y 5% --width 90% --height
 e = [':sh zellij run -n Yazi -c -f -x 15% -y 15% --width 70% --height 70% -- bash ~/.config/helix/yazi.sh']
 q = [':write-all', ':sh zellij run -n Scooter -c -f -x 5% -y 5% --width 90% --height 90% -- bash ~/.config/helix/scooter.sh']
 t = [
-  'move_prev_word_start',
-  'move_next_word_end',
+  'expand_selection',
   ':pipe-to zellij run -n "Go test" -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/gotest.sh $(cat -)',
+  'shrink_selection',
 ]
