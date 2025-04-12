@@ -12,13 +12,3 @@ option_as_alt = 'Both'
 [font]
 normal = { family = 'Hack Nerd Font Mono', style = 'Regular' }
 size = 14
-
-[selection]
-save_to_clipboard = false
-
-[cursor]
-style = { shape = 'underline' }
-vi_mode_style = { shape = 'block' }
-
-[mouse]
-hide_when_typing = false
