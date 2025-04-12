@@ -65,3 +65,8 @@ language-servers = ['typescript-language-server']
 [[language]]
 name = 'lua'
 auto-format = true
+
+[[language]]
+name = 'bash'
+indent = { tab-width = 2, unit = '\t' }
+auto-format = true
