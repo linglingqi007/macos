@@ -2,12 +2,12 @@
 
 color_end="\033[0m"
 color_orange="\033[1;38;5;208m"
-color_yellow="\033[1;32m"
-color_green="\033[1;36m"
+color_green="\033[1;32m"
+color_cyan="\033[1;36m"
 
 trap cleanup SIGINT
 
-gotest() {
+runtest() {
   local func_name=${1// /} # remove space
   local test_args=(
     -v
@@ -19,8 +19,8 @@ gotest() {
     test_args+=(-run ^"$func_name"\$)
   fi
 
-  echo -e "${color_yellow}❯ go${color_end} test""${color_green}" "${test_args[@]}" "${color_end}"
-  go test "${test_args[@]}"
+  echo -e "${color_green}❯ gotest${color_end}""${color_cyan}" "${test_args[@]}" "${color_end}"
+  gotest "${test_args[@]}"
 }
 
 cleanup() {
@@ -28,15 +28,15 @@ cleanup() {
   exit
 }
 
-gotest "$@"
+runtest "$@"
 
-echo -e "\n\n${color_yellow}Help: <${color_end}${color_orange}ENTER${color_end}${color_yellow}> re-run, <${color_end}${color_orange}Ctrl-c${color_end}${color_yellow}> exit${color_end}\n"
+echo -e "\n\n${color_green}Help: <${color_end}${color_orange}ENTER${color_end}${color_green}> re-run, <${color_end}${color_orange}Ctrl-c${color_end}${color_green}> exit${color_end}\n"
 
 while read -r; do
   case $REPLY in
   *)
-    gotest "$@"
-    echo -e "\n\n${color_yellow}Help: <${color_end}${color_orange}ENTER${color_end}${color_yellow}> re-run, <${color_end}${color_orange}Ctrl-c${color_end}${color_yellow}> exit${color_end}\n"
+    runtest "$@"
+    echo -e "\n\n${color_green}Help: <${color_end}${color_orange}ENTER${color_end}${color_green}> re-run, <${color_end}${color_orange}Ctrl-c${color_end}${color_green}> exit${color_end}\n"
     ;;
   esac
 done
