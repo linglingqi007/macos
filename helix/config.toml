@@ -52,6 +52,6 @@ e = [':sh zellij run -n Yazi -c -f -x 15% -y 15% --width 70% --height 70% -- bas
 q = [':write-all', ':sh zellij run -n Scooter -c -f -x 5% -y 5% --width 90% --height 90% -- bash ~/.config/helix/scooter.sh']
 t = [
   'expand_selection',
-  ':pipe-to zellij run -n "Go test" -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/gotest.sh $(cat -)',
+  ':pipe-to zellij run -n "Go test" -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/gotest.sh $(cat -)',
   'shrink_selection',
 ]
