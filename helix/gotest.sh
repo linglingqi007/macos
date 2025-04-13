@@ -9,8 +9,11 @@ trap cleanup SIGINT
 
 runtest() {
   local func_name=${1// /} # remove space
+  local -a formatter
+  IFS=' ' read -ra formatter <<<"$2"
+
   local test_args=(
-    -v
+    -json
     -timeout 10s
     -count 1
   )
@@ -19,8 +22,8 @@ runtest() {
     test_args+=(-run ^"$func_name"\$)
   fi
 
-  echo -e "${color_green}❯ gotest${color_end}""${color_cyan}" "${test_args[@]}" "${color_end}"
-  gotest "${test_args[@]}"
+  echo -e "${color_green}❯ go test${color_end}""${color_cyan}" "${test_args[@]}" "${color_end}""|""${color_green}" "${formatter[@]}" "${color_end}"
+  go test "${test_args[@]}" | "${formatter[@]}"
 }
 
 cleanup() {
@@ -32,7 +35,7 @@ runtest "$@"
 
 echo -e "\n\n${color_green}Help: <${color_end}${color_orange}ENTER${color_end}${color_green}> re-run, <${color_end}${color_orange}Ctrl-c${color_end}${color_green}> exit${color_end}\n"
 
-while read -r; do
+while read -rs; do
   case $REPLY in
   *)
     runtest "$@"
