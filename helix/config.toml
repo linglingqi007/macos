@@ -26,6 +26,9 @@ right = [
 [editor.lsp]
 goto-reference-include-declaration = false
 
+[editor.cursor-shape]
+insert = 'underline'
+
 [editor.file-picker]
 hidden = false
 parents = false
