@@ -16,6 +16,12 @@ name = '@vue/typescript-plugin'
 location = '/opt/homebrew/lib/node_modules/@vue/language-server/'
 languages = ['vue']
 
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[language-server.rust-analyzer.config.cargo]
+features = "all"
+
 [[language]]
 name = 'yaml'
 formatter = { command = 'deno', args = ['fmt', '-', '--ext', 'yml', '--line-width', '140'] }
