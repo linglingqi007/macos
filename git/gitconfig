@@ -3,7 +3,6 @@
 
 [core]
     pager = delta
-	excludesFile = ~/.gitignore
 	editor = hx
 
 [interactive]
