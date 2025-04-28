@@ -29,6 +29,7 @@ Temporary Items
 tags
 .idea
 .vscode
+.helix
 .swp
 node_modules
 makefilex
