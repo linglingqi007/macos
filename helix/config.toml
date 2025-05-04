@@ -7,6 +7,7 @@ cursorline = true
 color-modes = true
 idle-timeout = 0
 completion-timeout = 5
+bufferline = 'always'
 
 [editor.statusline]
 left = ['mode', 'spinner', 'version-control', 'file-name', 'read-only-indicator', 'file-modification-indicator']
@@ -53,7 +54,7 @@ skip-levels = 1
 e = [':write-all', ':sh zellij run -n yazi -c -f -x 15% -y 15% --width 70% --height 70% -- bash ~/.config/helix/yazi.sh']
 v = [':write-all', ':sh zellij run -n lazygit -c -f -x 0 -y 0 --width 100% --height 100% -- bash ~/.config/helix/lazygit.sh']
 m = [':sh zellij run -n lazysql -c -f -x 0 -y 0 --width 100% --height 100% -- bash ~/.config/helix/lazysql.sh']
-o = [':write-all', ':sh zellij run -n scooter -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/scooter.sh']
+o = [':write-all', ':sh zellij run -n scooter -c -f -x 0 -y 0 --width 100% --height 100% -- bash ~/.config/helix/scooter.sh']
 # t = [
 #   'expand_selection',
 #   ':pipe-to zellij run -n "Go test" -c -f -x 10% -y 10% --width 80% --height 80% -- bash ~/.config/helix/gotest.sh "$(cat -)" "tparse -pass"',
