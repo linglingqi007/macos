@@ -5,13 +5,17 @@ dscl . -read "/Users/${USER}" UserShell                              # 查看当
 sudo dscl . -create "/Users/${USER}" UserShell /opt/homebrew/bin/zsh # 设置默认 shell
 
 # keyboard
-defaults write -g ApplePressAndHoldEnabled -bool false                                                                                                                                                                                                                # 禁用按键长按
-defaults write -g InitialKeyRepeat -int 10                                                                                                                                                                                                                            # 重复初始延迟
-defaults write -g KeyRepeat -int 1                                                                                                                                                                                                                                    # 重复延迟
-defaults write -g AppleKeyboardUIMode -int 2                                                                                                                                                                                                                          # 启用完全键盘控制,可以用 Tab 键切换所有控件
+defaults write -g ApplePressAndHoldEnabled -bool false             # 禁用按键长按
+defaults write -g InitialKeyRepeat -int 10                         # 重复初始延迟
+defaults write -g KeyRepeat -int 1                                 # 重复延迟
+defaults write -g AppleKeyboardUIMode -int 1                       # 启用完全键盘控制,可以用 Tab 键切换所有控件
+defaults write -g com.apple.TextInputMenu visible -bool false      # 隐藏状态栏的输入法图标
+defaults write -g NSAutomaticDashSubstitutionEnabled -bool false   # 禁用智能引号和破折号
+defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false # 禁用连续空格插入句号
+defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false  # 禁用引号替换
+defaults write -g NSAutomaticCapitalizationEnabled -bool false     # 禁用自动大写首字母
+
 defaults write com.apple.HIToolbox AppleEnabledInputSources -array-add '<dict><key>InputSourceKind</key><string>TCIM</string><key>TISIntendedLanguage</key><string>zh-Hans</string><key>TISInputSourceID</key><string>com.apple.inputmethod.TCIM.WBX</string></dict>' # 添加中文86五笔输入法
-defaults write com.apple.TextInputMenu visible -bool false                                                                                                                                                                                                            # 隐藏状态栏的输入法图标
-defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false                                                                                                                                                                                        # 禁用连续空格插入句号
 
 # launchpad
 defaults write com.apple.dock springboard-rows -int 7    # launchpad 行数
