@@ -23,11 +23,21 @@ defaults write com.apple.dock springboard-columns -int 7 # launchpad 列数
 # rm -rf /private"$(getconf DARWIN_USER_DIR)"com.apple.dock.launchpad; killall Dock
 
 # dock
-defaults write com.apple.dock autohide -bool true       # 自动隐藏 dock
+defaults write com.apple.dock orientation -string left           # dock 在左侧
+defaults write com.apple.dock mineffect -string "genie"          # 神奇效果 缩放
+defaults write -g AppleActionOnDoubleClick -string "Maximize"    # 双击标题栏 为缩放 None=禁用 Minimize=最小化
+defaults write -g AppleMiniaturizeOnDoubleClick -bool false      # 让缩放接近最大化
+defaults write com.apple.dock minimize-to-application -bool true # 窗口最小化到应用
+
+defaults write com.apple.dock autohide -bool true                # 自动隐藏 dock
+defaults write com.apple.dock no-bouncing -bool false            # 弹跳打开应用
+defaults write com.apple.dock show-process-indicators -bool true # 显示应用指示灯
+defaults write com.apple.dock show-recents -bool false           # 不显示最近使用
+
 defaults write com.apple.dock showhidden -bool true     # 透明化隐藏应用图标
-defaults write com.apple.dock orientation -string left  # dock 在左侧
-defaults write com.apple.dock show-recents -bool false  # 不显示最近使用
 defaults write com.apple.dock persistent-apps -array "" # 取消固定应用
+
+defaults write com.apple.WindowManager StageManagerHideRecentApps -bool true # 台前高度 显示最近使用的app
 
 # icloud
 defaults write -g NSDocumentSaveNewDocumentsToCloud -bool true # 禁用保存到 iCloud
