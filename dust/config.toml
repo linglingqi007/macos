@@ -1,0 +1,7 @@
+reverse = true
+
+display-full-paths = true
+
+ignore-hidden = false
+
+output-format = "si"
