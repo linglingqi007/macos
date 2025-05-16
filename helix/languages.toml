@@ -22,6 +22,9 @@ command = "clippy"
 [language-server.rust-analyzer.config.cargo]
 features = "all"
 
+[language-server.ruff.config.settings]
+lineLength = 140
+
 [[language]]
 name = 'yaml'
 formatter = { command = 'deno', args = ['fmt', '-', '--ext', 'yml', '--line-width', '140'] }
@@ -45,6 +48,7 @@ auto-format = true
 
 [[language]]
 name = 'python'
+language-servers = ["ruff", "pyright"]
 auto-format = true
 
 [[language]]
