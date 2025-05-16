@@ -31,3 +31,4 @@ tags
 .vscode
 .swp
 node_modules
+.ruff_cache
