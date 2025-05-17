@@ -1,9 +1,14 @@
 gui:
+  scrollHeight: 3
   mouseEvents: false
-  splitDiff: always
-  showIcons: true
+  sidePanelWidth: 0.25
+  expandFocusedSidePanel: true
+  showNumstatInFilesView: true
+  showCommandLog: false
+  nerdFontsVersion: "3"
+  showBranchCommitHash: true
   filterMode: fuzzy
-  skipDiscardChangeWarning: true
+
   authorColors:
     "凌凌漆": red
 
@@ -11,5 +16,7 @@ git:
   paging:
     colorArg: always
     pager: delta --dark --paging=never
+  parseEmoji: true
 
 promptToReturnFromSubprocess: false
+disableStartupPopups: true
