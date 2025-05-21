@@ -32,3 +32,4 @@ tags
 .swp
 node_modules
 .ruff_cache
+.venv
