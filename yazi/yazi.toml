@@ -2,7 +2,7 @@
 # If you encounter any issues, please make an issue at https://github.com/yazi-rs/schemas.
 "$schema" = 'https://yazi-rs.github.io/schemas/yazi.json'
 
-[manager]
+[mgr]
 ratio = [1, 2, 3]
 mouse_events = []
 
@@ -18,3 +18,7 @@ run = 'git'
 id = 'git'
 name = '*/'
 run = 'git'
+
+[[plugin.prepend_previewers]]
+name = "*.md"
+run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"'

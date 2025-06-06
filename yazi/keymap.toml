@@ -1,19 +1,19 @@
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = 'T'
 run = 'plugin toggle-pane max-current'
 desc = 'Show or hide the preview pane'
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ['c', 'm']
 run = 'plugin chmod'
 desc = 'Chmod on selected files'
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ['g', 'c']
 run = 'plugin vcs-files'
 desc = 'Show Git file changes'
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ['g', 'C']
 run = 'cd ~/.config'
 desc = 'Go ~/.config'
