@@ -1,3 +1,6 @@
+[editor_open]
+command = "zellij action toggle-floating-panes; zelli action write 27; zellij action write-chars ':open %file:%line'; zellij action write 13"
+
 [preview]
 syntax_highlighting = true
 syntax_highlighting_theme = "gruvbox-dark"
