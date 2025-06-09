@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
-scooter --hidden
+search_text=${1}
+
+if [ -n "${search_text}" ]; then
+	scooter --hidden -i --search-text "${search_text}" --immediate-search
+else
+	scooter --hidden -i
+fi
 
 zellij action toggle-floating-panes
 
