@@ -18,5 +18,12 @@ git:
     pager: delta --dark --paging=never
   parseEmoji: true
 
+os:
+  edit: 'zellij action toggle-floating-panes; zelli action write 27; zellij action write-chars ":open {{filename}}"; zellij action write 13'
+  editAtLine: 'zellij action toggle-floating-panes; zelli action write 27; zellij action write-chars ":open {{filename}}:{{line}}"; zellij action write 13'
+  editAtLineAndWait: 'zellij action toggle-floating-panes; zelli action write 27; zellij action write-chars ":open {{filename}}:{{line}}"; zellij action write 13'
+  editInTerminal: true
+  openDirInEditor: 'zellij action toggle-floating-panes; zelli action write 27; zellij action write-chars ":open {{dir}}"; zellij action write 13'
+
 promptToReturnFromSubprocess: false
 disableStartupPopups: true
