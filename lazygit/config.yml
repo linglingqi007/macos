@@ -9,9 +9,6 @@ gui:
   showBranchCommitHash: true
   filterMode: fuzzy
 
-  authorColors:
-    "凌凌漆": red
-
 git:
   paging:
     colorArg: always
