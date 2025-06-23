@@ -43,14 +43,14 @@ defaults write com.apple.WindowManager StageManagerHideRecentApps -bool true # �
 defaults write -g NSDocumentSaveNewDocumentsToCloud -bool true # 禁用保存到 iCloud
 
 # finder
-# defaults write com.apple.finder QuitMenuItem -bool true # 允许通过 ⌘Q 退出
-defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false                       # 禁用更改文件扩展名时的警告
-defaults write com.apple.finder AppleShowAllExtensions -bool true                                # 显示所有文件扩展名
-defaults write com.apple.finder AppleShowAllFiles -bool true                                     # 显示所有文件
+# defaults write com.apple.finder QuitMenuItem -bool true                                          # 允许通过 ⌘Q 退出
+defaults write com.apple.finder AppleShowAllExtensions -bool true          # 显示所有文件扩展名
+defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false # 禁用更改文件扩展名时的警告
+# defaults write com.apple.finder AppleShowAllFiles -bool true                                     # 显示所有文件
 defaults write com.apple.finder ShowPathbar -bool true                                           # 显示路径栏
 defaults write com.apple.finder FXPreferredViewStyle -string clmv                                # 布局为多列
-defaults write com.apple.finder NewWindowTarget -string PfHm                                     # 新窗口使用 $HOME 路径
-defaults write com.apple.finder NewWindowTargetPath -string "file://$HOME/"                      # 新窗口使用 $HOME 路径
+defaults write com.apple.finder NewWindowTarget -string "PfPf"                                   # 使用自定义路径
+defaults write com.apple.finder NewWindowTargetPath -string "file://$HOME/money"                 # 新窗口指定路径
 defaults write com.apple.finder QLEnableTextSelection -bool true                                 # 允许在 Quick Look 中选择文本
 defaults write com.apple.finder FXInfoPanesExpanded -dict MetaData -bool true Preview -bool true # 显示元数据信息,但不在信息面板中预览
 
