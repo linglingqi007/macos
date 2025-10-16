@@ -10,7 +10,7 @@
 	diffFilter = delta --color-only
 
 [merge]
-    conflictstyle = zdiff3
+	conflictstyle = zdiff3
 
 [diff]
 	colorMoved = default
