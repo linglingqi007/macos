@@ -1,23 +1,24 @@
 [include]
-    path = ~/.config/delta/config
+	path = ~/.config/delta/config
 
 [core]
-    pager = delta
+	pager = delta
 	editor = hx
+	autocrlf = input
 
 [interactive]
-    diffFilter = delta --color-only
+	diffFilter = delta --color-only
 
 [merge]
     conflictstyle = zdiff3
 
 [diff]
-    colorMoved = default
+	colorMoved = default
 
 [user]
-	email = if.true.else@gmail.com
-	name = 周星星✨
-	signingkey = ~/.ssh/id_rsa.pub
+	email = ice78522@gmail.com
+	name = latiao
+	signingkey = ~/.ssh/latiao.pub
 
 [gpg]
 	format = ssh
@@ -36,3 +37,9 @@
 
 [url "git@github.com:yybx"]
 	insteadOf = https://github.com/yybx
+
+[credential]
+	helper = store
+
+[url "git@gh.latiao:gxxox"]
+	insteadOf = https://github.com/gxxox
