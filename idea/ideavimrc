@@ -21,6 +21,10 @@ sethandler <C-g> a:ide
 sethandler <C-j> a:ide
 sethandler <C-m> a:ide
 sethandler <C-r> a:ide
+sethandler <C-2> a:ide
+sethandler <C-S-2> a:ide
+sethandler <C-6> a:ide
+sethandler <C-S-6> a:ide
 
 set anyobject
 set easymotion
@@ -63,16 +67,22 @@ map <leader>u <Action>(GotoUrlAction)
 map <leader>/ <Action>(TextSearchAction)
 map <leader>y <Action>(QuickTypeDefinition)
 
-map Q gq
 nnoremap L g_
 nnoremap H ^
 nnoremap j gj
 nnoremap k gk
 nnoremap U <C-r>
 
-map / <Plug>(easymotion-s)
-map ? <Plug>(easymotion-s)
+map Q gq
 
+nmap ]g <Action>(VcsShowNextChangeMarker)
+nmap ]d <Action>(GotoNextError)
+
+nmap [g <Action>(VcsShowPrevChangeMarker)
+nmap [d <Action>(GotoPreviousError)
+
+map / <Plug>(easymotion-s)
+map ? <Plug>(easymotion-prefix)
 
 let g:highlightedyank_highlight_duration = 300
 
