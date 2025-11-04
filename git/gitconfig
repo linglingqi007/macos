@@ -1,45 +1,66 @@
 [include]
 	path = ~/.config/delta/config
 
+
+[credential]
+	helper = store
+
+
 [core]
 	pager = delta
 	editor = hx
 	autocrlf = input
 
+
 [interactive]
 	diffFilter = delta --color-only
+
 
 [merge]
 	conflictstyle = zdiff3
 
+
 [diff]
 	colorMoved = default
+
 
 [user]
 	email = ice78522@gmail.com
 	name = latiao
 	signingkey = ~/.ssh/latiao.pub
 
+
 [gpg]
 	format = ssh
+
 
 [commit]
 	gpgsign = true
 
+
 [tag]
 	gpgsign = true
+
 
 [init]
 	defaultBranch = main
 
+
 [url "git@github.com:firemky"]
 	insteadOf = https://github.com/firemky
+
 
 [url "git@github.com:yybx"]
 	insteadOf = https://github.com/yybx
 
-[credential]
-	helper = store
 
 [url "git@gh.latiao:gxxox"]
 	insteadOf = https://github.com/gxxox
+
+
+[includeIf "hasconfig:remote.*.url:git@gh.latiao:gxxox/**"]
+	path = ~/.config/git/gxxox
+
+
+[includeIf "hasconfig:remote.*.url:git@github.com:linglingqi007/**"]
+	path = ~/.config/git/linglingqi007

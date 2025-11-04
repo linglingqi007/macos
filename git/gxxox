@@ -1,0 +1,4 @@
+[user]
+name = latiao
+email = ice78522@gmail.com
+signingkey = ~/.ssh/latiao.pub
